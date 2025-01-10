@@ -73,9 +73,9 @@ def main():
 
         try:
             while True:
-                # chunk_file = "harvard.wav" example sound file for texting.
-                chunk_file = "temp_chunk.wav"
-                record_chunk(p, stream, chunk_file)
+                chunk_file = "harvard.wav" # example sound file for texting.
+                # chunk_file = "temp_chunk.wav"
+                #record_chunk(p, stream, chunk_file)
 
                 # Ignore silence
                 if is_silent(chunk_file):
@@ -94,7 +94,7 @@ def main():
                 display_transcription_with_highlights(transcription, matched_keywords)
 
                 # Clean up the chunk file after processing
-                os.remove(chunk_file)
+                # os.remove(chunk_file)
 
                 # Small delay to avoid overwhelming the terminal with too many updates
                 time.sleep(0.1)
