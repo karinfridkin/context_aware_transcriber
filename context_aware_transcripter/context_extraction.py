@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 def extract_text_from_file(file_path):
     with open(file_path, "r") as file:
         text = file.read()
-        print("the text is:", text)
     return text
 
 # Function to extract context from a URL
