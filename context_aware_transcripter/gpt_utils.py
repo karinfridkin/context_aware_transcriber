@@ -1,21 +1,8 @@
 import openai
 import string
 
-
-def get_relevant_words_from_gpt(context: str, transcription: str) -> set:
-    """
-    Extract words and phrases from a transcription that are directly related to the main subject 
-    identified in the context.
-    
-    Args:
-        context (str): Text containing the main subject/topic to focus on
-        transcription (str): Text to extract relevant words/phrases from
-        
-    Returns:
-        set: A set of words and phrases that are directly related to the context's main subject
-    """
-    
-
+# Set your OpenAI API key
+def get_relevant_words_from_gpt(context: str, transcription: str):
     prompt = f"""
     First, identify the main subject/topic from this context:
     {context}
@@ -68,5 +55,4 @@ def get_relevant_words_from_gpt(context: str, transcription: str) -> set:
         if term.strip()
     }
     
-    return cleaned_terms
-    
+    return relevant_words_clean
